@@ -9,4 +9,4 @@
 
 #### 流程
 
-![image](https://note.youdao.com/yws/api/personal/file/4DCCF18BAA9042569A19030A92E74B7F?method=download&shareKey=ac305685e37298be22c1ac46679298d8)
+![image](https://github.com/TheSmurfs/Githubphotos/blob/master/%E6%B5%81%E7%A8%8B%E5%9B%BE/%E6%A8%A1%E6%8B%9F%E7%99%BB%E9%99%86.png?raw=true)
