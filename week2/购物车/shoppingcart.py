@@ -7,10 +7,10 @@
 
 
 
-def shoppingcart(username):
+def shoppingcart(username,salary):
     ' 购物车主体函数 '
 
-    salary = input("请输入工资:")
+#    salary = input("请输入工资:")
 
     product_list = [
         ('Iphone',5800),
@@ -44,15 +44,23 @@ def shoppingcart(username):
             elif user_choice == 'q':
                 print('------shoping list------')
                 for p in shopping_list:
-                    with open("recording.txt", "a+", encoding="utf-8") as f:
+                    with open('./' + username + "/recording.txt", "a+", encoding="utf-8") as f:
                         p = str(p)
                         f.write(p+'\n')
                     print(p)
                 with open('./' + username + "/salary.txt", "w+", encoding="utf-8") as f:
-                    f.write(salary + '\n')
+                    salary = str(salary)
+                    f.write(salary)
                 print("your current balance:", salary)
                 exit()
             else:
                 print("invalid option")
 
-#def landed():
+def Query_the_records(choose,username):
+
+    if choose == 'y':
+        with open('./' + username + "/recording.txt", "r", encoding="utf-8") as f:
+            recording = f.read()  # 显示文本内容
+            print(recording)
+    else:
+        pass

@@ -4,6 +4,7 @@
 # datetime:2018/4/11 19:32
 # software: PyCharm
 
+import judgment_user
 import shoppingcart
 
 
@@ -35,7 +36,9 @@ def main():
                     if password == user_dic[username]:#判断字典中帐号密码是否正确
 
                         print("%s:\033[36;1m登录成功!\033[0m"%username)
-                        shoppingcart.shoppingcart()
+                        choose = input("\033[38;1m是否查询之前消费记录(查询请输入y，不查询任意键)-->>\033[0m:")
+                        shoppingcart.Query_the_records(choose, username)
+                        judgment_user.mkdir(username)
                         exit()
                     else:
                         count +=1 #密码每次错误数量加1

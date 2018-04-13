@@ -6,6 +6,7 @@
 import shoppingcart
 
 def mkdir(path):
+    '判断是否是第一次登录'
     # 引入模块
     import os
 
@@ -23,22 +24,16 @@ def mkdir(path):
     if not isExists:
         # 如果不存在则创建目录
         print(path + ' 用户第一次登陆')
+        salary = input("请输入工资:")
         # 创建目录操作函数
         os.makedirs(path)
-        with open('./' + 'fcq' + "/recording.txt", "w+", encoding="utf-8") as f:
-#            p = str(p)
-            f.write('666666' + '\n')
-        shoppingcart.shoppingcart()
+        shoppingcart.shoppingcart(path, salary)
         return True
     else:
         # 如果目录存在则不创建，并提示目录已存在
         print(path + ' 用户已登陆过')
-
-        shoppingcart.shoppingcart()
+        with open('./' + path + "/salary.txt", "r+", encoding="utf-8") as f:
+            salary = f.read()
+        print("余额剩余：", salary)
+        shoppingcart.shoppingcart(path, salary)
         return False
-
-
-# 定义要创建的目录
-mkpath = "fcq"
-# 调用函数
-mkdir(mkpath)
