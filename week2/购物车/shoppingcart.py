@@ -35,8 +35,9 @@ def shoppingcart(username,salary):
                     p_item = product_list[user_choice]
                     if p_item[1] <= salary:
                         shopping_list.append(p_item)
+#                        print(shopping_list, "\033[36;1放入购物车成功!\033[0m")
                         salary -=p_item[1]
-                        print("added %s into shopping cart ,your current balance is %s" %(p_item,salary))
+                        print("\033[36;1m added %s into shopping cart ,your current balance is %s \033[0m" %(p_item,salary))
                     else:
                         print("\033[41;1m你的余额只剩[%s]\033[0m" %salary)
                 else:

@@ -32,6 +32,8 @@ def mkdir(path):
     else:
         # 如果目录存在则不创建，并提示目录已存在
         print(path + ' 用户已登陆过')
+        choose = input("\033[36;1m 是否查询之前消费记录(查询请输入y，不查询任意键)-->> \033[0m:")
+        shoppingcart.Query_the_records(choose, path)
         with open('./' + path + "/salary.txt", "r+", encoding="utf-8") as f:
             salary = f.read()
         print("余额剩余：", salary)
