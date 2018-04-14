@@ -4,7 +4,7 @@
 # datetime:2018/4/9 13:47
 # software: PyCharm
 
-
+#本模块包换购物车主体函数、购物记录查询函数
 
 
 def shoppingcart(username,salary):
@@ -28,7 +28,7 @@ def shoppingcart(username,salary):
         while True:
             for item in product_list:
                 print(product_list.index(item),item)
-            user_choice = input("选择要买吗>>>:")
+            user_choice = input("选择要买吗,输入q退出>>>:")
             if user_choice.isdigit():
                 user_choice = int(user_choice)
                 if user_choice < len(product_list) and user_choice >= 0:
@@ -39,7 +39,7 @@ def shoppingcart(username,salary):
                         salary -=p_item[1]
                         print("\033[36;1m added %s into shopping cart ,your current balance is %s \033[0m" %(p_item,salary))
                     else:
-                        print("\033[41;1m你的余额只剩[%s]\033[0m" %salary)
+                        print("\033[41;1m 你的余额只剩[%s] \033[0m" %salary)
                 else:
                     print("product code [%s] is not exist!" %user_choice)
             elif user_choice == 'q':
@@ -58,7 +58,7 @@ def shoppingcart(username,salary):
                 print("invalid option")
 
 def Query_the_records(choose,username):
-
+    '购物车记录查询'
     if choose == 'y':
         with open('./' + username + "/recording.txt", "r", encoding="utf-8") as f:
             recording = f.read()  # 显示文本内容
