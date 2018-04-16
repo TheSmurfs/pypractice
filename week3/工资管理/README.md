@@ -77,4 +77,4 @@ Alex的工资是：100000。
 ```
 #### 流程
 
-![image](https://github.com/TheSmurfs/Githubphotos/blob/master/%E6%B5%81%E7%A8%8B%E5%9B%BE/%E8%B4%AD%E7%89%A9%E8%BD%A6.png?raw=true)
+![image](https://github.com/TheSmurfs/Githubphotos/blob/master/%E6%B5%81%E7%A8%8B%E5%9B%BE/%E5%B7%A5%E8%B5%84%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F.png?raw=true)
